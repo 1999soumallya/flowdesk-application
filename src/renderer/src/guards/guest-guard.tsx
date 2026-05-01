@@ -12,5 +12,5 @@ export default function GuestGuard(): React.JSX.Element {
     return <SplashScreen />;
   }
 
-  return isAuthenticated ? <Navigate to="/" replace state={{ from: location }} /> : <Outlet />;
+  return isAuthenticated ? <Navigate to="/dashboard" replace state={{ from: location }} /> : <Outlet />;
 }

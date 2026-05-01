@@ -1,6 +1,6 @@
 {
   "name": "flowdesk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This application is use for track my work and task completion state on real time",
   "main": "./out/main/index.js",
   "author": "soumallya.com",

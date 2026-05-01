@@ -1,18 +1,22 @@
 import AuthGuard from "@renderer/guards/auth-guard";
 import GuestGuard from "@renderer/guards/guest-guard";
+import LoginPage from "@renderer/pages/auth/login.page";
 import { createHashRouter } from "react-router";
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <AuthGuard />,
+    element: <GuestGuard />,
     children: [
-
+      {
+        index: true,
+        element: <LoginPage />
+      }
     ]
   },
   {
     path: "/dashboard",
-    element: <GuestGuard />,
+    element: <AuthGuard />,
     children: [
 
     ]
