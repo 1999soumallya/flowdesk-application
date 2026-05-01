@@ -134,10 +134,7 @@ function LoginPage(): React.JSX.Element {
               </button>
             </div>
 
-            <button
-              className="mt-2 flex h-12 w-full items-center justify-center rounded-lg bg-[#7B6EF6] text-[14px] font-semibold text-white transition hover:bg-[#9288FA] focus:outline-none focus:ring-2 focus:ring-[#7B6EF6]/30"
-              type="submit"
-            >
+            <button className="mt-2 flex h-12 w-full items-center justify-center rounded-lg bg-[#7B6EF6] text-[14px] font-semibold text-white transition hover:bg-[#9288FA] focus:outline-none focus:ring-2 focus:ring-[#7B6EF6]/30" type="submit">
               Sign in
             </button>
           </form>
