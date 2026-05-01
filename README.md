@@ -32,3 +32,21 @@ $ npm run build:mac
 # For Linux
 $ npm run build:linux
 ```
+
+## OTA Updates
+
+FlowDesk uses `electron-updater` with Electron Builder's GitHub provider. Builds are published to GitHub releases at `1999soumallya/flowdesk-application`.
+
+For Windows, add `GH_TOKEN` to a local `.env` file with repo release permission, bump `version` in `package.json`, then run:
+
+```env
+GH_TOKEN=your_github_token
+```
+
+```bash
+$ npm run publish:win
+```
+
+Electron Builder uploads the installer, `latest.yml`, and blockmap files to the GitHub release. The packaged app checks that release feed and downloads updates from there.
+
+The installed app does not use `GH_TOKEN`. Keep the repository or release feed public for GitHub-based auto updates. If the repository is private, GitHub returns 404 for `releases.atom`; use a public GitHub release or switch to a private generic update server instead.
